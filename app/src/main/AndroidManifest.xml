@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.techtown.hoxy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 인터넷에 관련된 권한들 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".login.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/hoxy_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/hoxy_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="org.techtown.hoxy"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".waste.WasteApplyActivity" />
+        <activity android:name=".waste.WasteInfoActivity" />
+        <activity android:name=".waste.ResultActivity" />
+        <activity android:name=".waste.PaymentActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.LoginActivity">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".CodeActivity" />
+        <activity android:name=".community.PostWriteActivity" />
+        <activity android:name=".community.PostDetailActivity" />
+        <activity android:name=".community.PostListActivity" />
+        <activity android:name=".waste.MypageActivity" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="c868680e6d3732c69185d2478e9f33c0" />
+    </application>
+
+</manifest>

@@ -1,0 +1,12 @@
+<resources>
+            <style name="AppTheme.NoActionBar">
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+            <item name="android:statusBarColor">@android:color/transparent</item>
+        </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:colorControlHighlight">#3cc47c</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+</resources>

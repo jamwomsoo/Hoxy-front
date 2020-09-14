@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HOXY</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">로그아웃</string>
+    <string name="board_name">Community</string>
+
+    <string name="menu_home">메인화면</string>
+    <string name="menu_gallery">커뮤니티</string>
+    <string name="menu_slideshow">배출 신청 조회</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="title_activity_payment">PaymentActivity</string>
+
+    <string name="search_hint_query">검색어를 입력하세요.</string>
+</resources>

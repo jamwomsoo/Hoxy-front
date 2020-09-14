@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".waste.WasteApplyActivity"
+    tools:showIn="@layout/app_bar_waste_apply">
+
+
+    <!--  <View
+          android:id="@+id/div_line"
+          android:layout_width="411dp"
+          android:layout_height="2dp"
+          android:background="#80000000" />
+-->
+    <!-- <TextView
+         android:id="@+id/text_waste_list"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:layout_marginBottom="10dp"
+         android:gravity="center"
+         android:text="배출 목록" />
+
+     <View
+         android:id="@+id/div_line1"
+         android:layout_width="411dp"
+         android:layout_height="1dp"
+         android:background="#80000000" />
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="horizontal">
+
+
+         <TextView
+             android:id="@+id/tv1"
+             android:layout_width="70dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="폐기물명"
+             android:textStyle="bold" />
+
+         <TextView
+             android:id="@+id/tv2"
+             android:layout_width="30dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="규격" />
+
+         <TextView
+             android:id="@+id/tv3"
+             android:layout_width="30dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="수수료" />
+     </LinearLayout>
+
+     <View
+         android:id="@+id/div_line5"
+         android:layout_width="411dp"
+         android:layout_height="1dp"
+         android:layout_marginBottom="5dp"
+         android:background="#80000000" />
+
+     <ListView
+         android:id="@+id/waste_list_view"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+     </ListView>
+
+     <View
+         android:id="@+id/div_line2"
+         android:layout_width="411dp"
+         android:layout_height="1dp"
+
+         android:background="#80000000" />-->
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        app:defaultNavHost="true"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:id="@+id/div_line8"
+                android:layout_width="411dp"
+                android:layout_height="1dp"
+                android:background="#80000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="물품 수" />
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="총 수수료" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/div_line3"
+                android:layout_width="411dp"
+                android:layout_height="1dp"
+                android:background="#80000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="갯수 " />
+
+                <TextView
+                    android:id="@+id/tv_fee"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="수수료" />
+            </LinearLayout>
+
+            <!--        은석s 수정    -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp">
+
+                <View
+                    android:id="@+id/div_line10"
+                    android:layout_width="411dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#80000000"
+                    tools:ignore="MissingConstraints" />
+
+
+                <ImageView
+                    android:id="@+id/nameimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_person_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/div_line10"
+
+                    />
+
+                <TextView
+                    android:id="@+id/text_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="이름"
+                    app:layout_constraintStart_toEndOf="@+id/nameimg"
+                    app:layout_constraintTop_toTopOf="@+id/nameimg" />
+
+                <EditText
+                    android:id="@+id/edit_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="홍길동"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/edit_phone_num"
+                    android:singleLine="true"
+                    app:layout_constraintStart_toEndOf="@+id/nameimg"
+                    app:layout_constraintTop_toBottomOf="@+id/text_user_name" />
+
+                <ImageView
+                    android:id="@+id/phoneimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_phone_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_user_name"
+
+                    />
+
+                <TextView
+                    android:id="@+id/text_phone_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:text="휴대폰 번호"
+                    app:layout_constraintStart_toEndOf="@+id/phoneimg"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_user_name" />
+
+                <EditText
+                    android:id="@+id/edit_phone_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="010"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:nextFocusUp="@+id/edit_user_name"
+                    android:nextFocusDown="@+id/edit_address"
+                    android:singleLine="true"
+                    app:layout_constraintStart_toEndOf="@+id/nameimg"
+                    app:layout_constraintTop_toBottomOf="@+id/text_phone_num" />
+
+
+                <ImageView
+                    android:id="@+id/addressimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:src="@drawable/ic_location_on_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_phone_num"
+
+                    />
+
+                <TextView
+                    android:id="@+id/text_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+
+                    android:text="폐기물 배출 장소"
+                    app:layout_constraintStart_toEndOf="@+id/addressimg"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_phone_num" />
+
+                <EditText
+                    android:id="@+id/edit_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+
+                    android:hint="배출 주소"
+                    android:nextFocusUp="@+id/edit_phone_num"
+                    android:nextFocusDown="@+id/edit_address_detail"
+                    android:singleLine="true"
+                    app:layout_constraintStart_toEndOf="@+id/nameimg"
+                    app:layout_constraintTop_toBottomOf="@+id/text_address" />
+
+                <EditText
+                    android:id="@+id/edit_address_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="상세 주소"
+                    android:nextFocusUp="@+id/edit_address"
+                    android:nextFocusDown="@+id/edit_date"
+                    android:singleLine="true"
+                    app:layout_constraintStart_toEndOf="@+id/nameimg"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_address" />
+                <ImageView
+                    android:id="@+id/timeimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:src="@drawable/ic_access_time_black_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_address_detail"
+
+                    />
+                <TextView
+                    android:id="@+id/text_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="13dp"
+
+                    android:text="폐기물 배출 일시"
+                    app:layout_constraintStart_toEndOf="@+id/timeimg"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_address_detail" />
+
+                <TextView
+                    android:id="@+id/edit_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="0000년 00월 00일"
+                    android:maxLines="1"
+                    android:nextFocusUp="@+id/edit_address_detail"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/nameimg"
+                    app:layout_constraintTop_toBottomOf="@+id/text_date" />
+
+                <TextView
+                    android:id="@+id/edit_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:hint="00시 00분"
+                    android:maxLines="1"
+                    android:nextFocusUp="@+id/edit_date"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/nameimg"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_date" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/button_cancle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border_red"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:text="취소"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button_next"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border_next"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:text="결제"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button_cancle"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
